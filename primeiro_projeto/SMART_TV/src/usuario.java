@@ -10,8 +10,15 @@ public class usuario {
         televisao.aumentarVolume();
         televisao.aumentarVolume();
         televisao.diminuirVolume();
+        televisao.subirCanal();
+        televisao.subirCanal();
+        
 
         System.out.println("Novo status - televisao ligada? " + televisao.ligada);
         System.out.println("Novo status - volume televisao? " + televisao.volume);
-    }
+        System.out.println("Novo status - canal televisao? " + televisao.canal);
+        
+        televisao.mudarCanal(89);
+        System.out.println("Novissimo status - canal televisao? " + televisao.canal);
+    }   
 }
