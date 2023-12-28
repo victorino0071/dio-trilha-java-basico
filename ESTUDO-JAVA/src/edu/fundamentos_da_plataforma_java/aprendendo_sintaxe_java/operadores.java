@@ -31,9 +31,24 @@ public class operadores {
         String resultado = a==b ? "verdadeiro" : "falso";
 
         System.out.println(resultado);
+        
 
+        //operadores lógicos "e" e "ou"
+        boolean condicao1 = true;
 
+        boolean condicao2 = false;
+        
+        if (condicao1 && condicao2){
+            System.err.println("Ambas as condições são verdadeiras");
+        }
 
+        if (condicao1 || condicao2){
+            System.out.println("Uma das condições é verdadeira");
+        }
+
+        if (condicao1 && (a == b)){
+            System.out.println("Primeira condição verdadeira e 'a' é igual a 'b'");
+        }
     }
     
 }
