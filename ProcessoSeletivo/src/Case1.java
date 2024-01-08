@@ -1,12 +1,45 @@
 import java.util.Scanner;
 import java.util.Locale;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Case1 {
     public static void main(String[] args) throws Exception {
-
+        entrandoEmContato("Joao");
     }
 
+        static void entrandoEmContato(String candidato){
+            int tentativasRealizadas = 1;
+            boolean continuaTentando = true;
+            boolean atendeu = false;
+
+            do {
+                atendeu = atender();
+                if (atendeu == false){
+                    tentativasRealizadas ++;
+                }
+                else{
+                    System.out.println("CONTATO REALIZADO COM SUCESSO NA TENTATIVA N° " + tentativasRealizadas);
+                }   
+
+            }while(tentativasRealizadas < 3 && atendeu == false);
+            if (!atendeu){
+                System.out.println("Não conseguimos entrar em contato com o candidato " + candidato);
+            }
+        }
+
+
+        static void imprimirSelecionados(){
+            String [] candidatosSelecionados = {"LUCIANA","VICTOR","GUSTAVO","NATHAN","SIRINO"};
+            
+            for (int indice = 0; indice < candidatosSelecionados.length; indice++){
+                System.out.println("O candidato de N° " +(indice+1)+ " é o " + candidatosSelecionados[indice]);
+            }
+        }
+
+        static boolean atender(){
+            return new Random().nextInt(3)==1;
+        }
         static void selecaoCandidatos(){
             String candidatos[] = {"LUCIANA","VICTOR","GUSTAVO","NATHAN","SIRINO", "LUCILENE", "KAINA", "ANGELA", "CLAYTON"};
             int candidatoAtual = 0;
