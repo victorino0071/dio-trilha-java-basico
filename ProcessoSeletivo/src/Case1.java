@@ -10,7 +10,6 @@ public class Case1 {
 
         static void entrandoEmContato(String candidato){
             int tentativasRealizadas = 1;
-            boolean continuaTentando = true;
             boolean atendeu = false;
 
             do {
